@@ -22,8 +22,8 @@ commands will not be available next time you start your editor.
 
 ## Commands
 
-`shellcheck-enable` starts linting the current window with shellcheck when you `:write` it.
-`shellcheck-disable` turns off linting the current window.
+- `shellcheck-enable` starts linting the current window with shellcheck when you `:write` it.
+- `shellcheck-disable` turns off linting the current window.
 
 ## Configuration
 
