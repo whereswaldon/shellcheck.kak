@@ -3,6 +3,10 @@
 
 ## Installation
 
+First, install `shellcheck`. See [here](https://github.com/koalaman/shellcheck#installing) for directions.
+
+To install the plugin:
+
 ```bash
 git clone https://github.com/whereswaldon/shellcheck.kak
 ln -sv $PWD/shellcheck.kak/shellcheck.kak ~/.config/kak/autoload/
