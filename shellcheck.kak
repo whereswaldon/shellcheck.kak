@@ -31,7 +31,7 @@ define-command -hidden -override -docstring "enable shellcheck in the current wi
             # enable warnings from sourced files
             flags="$flags -a"
         fi
-        echo "env --chdir="$(dirname "${kak_buffile}")" shellcheck $flags"
+        echo "shellcheck $flags"
     }
     lint-enable
     hook -group shellcheck window BufWritePre .* %{
