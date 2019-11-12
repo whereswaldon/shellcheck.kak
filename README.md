@@ -5,24 +5,28 @@
 
 First, install `shellcheck`. See [here](https://github.com/koalaman/shellcheck#installing) for directions.
 
-To install the plugin:
+### With plug.kak
 
-```bash
-git clone https://github.com/whereswaldon/shellcheck.kak
-ln -sv $PWD/shellcheck.kak/shellcheck.kak ~/.config/kak/autoload/
+To install the plugin, I recommend using [`plug.kak`](https://github.com/andreyorst/plug.kak). You can install it by adding the following to your `kakrc`:
+
+```
+plug "whereswaldon/shellcheck.kak"
 ```
 
-**Note:** If this is your first time installing a Kakoune plugin and you don't already
-have a `~/.config/kak/autoload/` folder, I recommend following these steps to create
-it:
+### Manually
+
+If you prefer to install it manually, you can use:
 
 ```bash
-mkdir -p ~/.config/kak/autoload/
-ln -sv $(dirname $(which kak))/../share/kak/autoload ~/.config/kak/autoload/system
+mkdir -p ~/.config/kak/plugins/
+git clone https://github.com/whereswaldon/shellcheck.kak ~/.config/kak/plugins/shellcheck.kak/
 ```
 
-If you don't symlink the system-wide `autoload` folder, all of the default Kakoune
-commands will not be available next time you start your editor.
+You'll need to add the following to your kakrc as well:
+
+```
+source "%val{config}/plugins/shellcheck.kak/shellcheck.kak"
+```
 
 ## Commands
 
