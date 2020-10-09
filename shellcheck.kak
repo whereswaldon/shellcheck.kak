@@ -33,7 +33,7 @@ define-command -hidden -override -docstring "enable shellcheck in the current wi
         fi
         echo "shellcheck $flags"
     }
-    lint-enable
+    lint
     hook -group shellcheck window BufWritePre .* %{
         lint
     }
@@ -54,7 +54,7 @@ define-command -override -docstring "enable shellcheck in the current window" sh
     }
 }
 define-command -override -docstring "disable shellcheck in the current window" shellcheck-disable %{
-    lint-disable
+    lint-hide-diagnostics
     remove-hooks window shellcheck
 }
 
